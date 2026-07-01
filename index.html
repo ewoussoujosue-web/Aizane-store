@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aizane Store - Sneakers Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #1a1a2e;
+            min-height: 100vh;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e8ecf1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a2a3a;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .marquee-wrapper {
+            background: linear-gradient(90deg, #facc15, #f59e0b, #facc15);
+            padding: 10px 0;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 101;
+            box-shadow: 0 4px 20px rgba(250, 204, 21, 0.3);
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee-content span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0b1a2e;
+            padding: 0 50px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .marquee-content span i {
+            font-size: 1.3rem;
+            color: #0b1a2e;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .header-wrapper {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f44 100%);
+            border-radius: 0 0 40px 40px;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 48px;
+            z-index: 100;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+        .logo h1 span {
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-box {
+            background: rgba(255,255,255,0.08);
+            border-radius: 60px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
+            backdrop-filter: blur(8px);
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            width: 200px;
+        }
+        .search-box input::placeholder {
+            color: #94a3b8;
+        }
+        .search-box i {
+            color: #94a3b8;
+        }
+
+        .cart-icon {
+            position: relative;
+            background: rgba(255,255,255,0.1);
+            padding: 14px 20px;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cart-icon:hover {
+            background: rgba(255,255,255,0.18);
+            transform: scale(1.02);
+        }
+        .cart-icon i {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        .cart-icon .badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #ef4444;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 30px;
+            min-width: 26px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            cursor: pointer;
+            padding: 6px 14px 6px 6px;
+            border-radius: 60px;
+            background: rgba(255,255,255,0.08);
+            transition: background 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .user-menu:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .user-menu .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #facc15;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b1a2e;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .user-menu .user-name {
+            font-weight: 500;
+            font-size: 0.85rem;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+            background: #fff;
+            padding: 16px 24px;
+            border-radius: 60px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            align-items: center;
+        }
+        .filters .filter-label {
+            font-weight: 600;
+            color: #334155;
+            margin-right: 8px;
+        }
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 40px;
+            border: 2px solid #e2e8f0;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #334155;
+            transition: all 0.25s;
+        }
+        .filter-btn:hover {
+            border-color: #1a2f44;
+            color: #1a2f44;
+        }
+        .filter-btn.active {
+            background: #1a2f44;
+            color: #fff;
+            border-color: #1a2f44;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 20px 20px 24px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f4f9;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1a2f44, #facc15);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #f8fafc;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 8px;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.08) rotate(-2deg);
+        }
+
+        .product-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(11, 26, 46, 0.3);
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+        .product-card:hover .product-image-overlay {
+            opacity: 1;
+        }
+        .product-image-overlay i {
+            color: #fff;
+            font-size: 2.5rem;
+            transform: scale(0.5);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover .product-image-overlay i {
+            transform: scale(1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #facc15;
+            color: #1a1a2e;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin: 14px 0 4px;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+        .product-card .brand {
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 2px solid #f1f4f9;
+        }
+        .product-card .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0b1a2e;
+        }
+        .product-card .price small {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .btn-add {
+            background: #0b1a2e;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 120px;
+            justify-content: center;
+        }
+        .btn-add:hover {
+            background: #1a2f44;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(11, 26, 46, 0.25);
+        }
+        .btn-add i {
+            font-size: 1rem;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s;
+        }
+        .cart-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -480px;
+            width: 460px;
+            height: 100vh;
+            background: #ffffff;
+            box-shadow: -10px 0 50px rgba(0, 0, 0, 0.12);
+            padding: 30px 28px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f1f4f9;
+            margin-bottom: 20px;
+        }
+        .cart-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cart-header h2 i {
+            color: #1a2f44;
+        }
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #94a3b8;
+            transition: color 0.2s;
+            padding: 8px;
+        }
+        .close-cart:hover {
+            color: #ef4444;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 50px 0;
+            color: #94a3b8;
+        }
+        .cart-empty i {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #f1f4f9;
+            align-items: center;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .cart-item img {
+            width: 72px;
+            height: 72px;
+            object-fit: cover;
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 4px;
+        }
+        .cart-item .info {
+            flex: 1;
+        }
+        .cart-item .info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .cart-item .info .item-price {
+            color: #1a2f44;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .cart-item .qty-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f1f4f9;
+            border-radius: 40px;
+            padding: 4px 8px;
+        }
+        .cart-item .qty-control button {
+            background: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #334155;
+        }
+        .cart-item .qty-control button:hover {
+            background: #e2e8f0;
+        }
+        .cart-item .qty-control span {
+            font-weight: 700;
+            min-width: 24px;
+            text-align: center;
+        }
+        .cart-item .remove-item {
+            background: none;
+            border: none;
+            color: #ef4444;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 30px;
+            transition: background 0.2s;
+        }
+        .cart-item .remove-item:hover {
+            background: #fee2e2;
+        }
+
+        .cart-footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 2px solid #f1f4f9;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+        .checkout-btn {
+            background: linear-gradient(135deg, #0b1a2e, #1a2f44);
+            color: #fff;
+            border: none;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .checkout-btn:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 30px rgba(26, 47, 68, 0.25);
+        }
+        .checkout-btn i {
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-notice {
+            background: linear-gradient(135deg, #075e54, #128c7e);
+            color: #fff;
+            padding: 18px 28px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 30px 0 50px;
+            box-shadow: 0 8px 30px rgba(7, 94, 84, 0.25);
+        }
+        .whatsapp-notice .left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .whatsapp-notice .left i {
+            font-size: 2.2rem;
+            color: #25d366;
+        }
+        .whatsapp-notice .left span {
+            font-weight: 500;
+            opacity: 0.95;
+        }
+        .whatsapp-notice .phone {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a2f44, #2a4a6a);
+            color: #fff;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ===== MODAL AUTH ===== */
+        .auth-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .auth-modal.active {
+            display: flex;
+        }
+        .auth-modal .modal-content {
+            background: #fff;
+            border-radius: 32px;
+            padding: 40px 35px 35px;
+            max-width: 460px;
+            width: 100%;
+            max-height: 95vh;
+            overflow-y: auto;
+            animation: slideUp 0.4s ease;
+            position: relative;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .auth-modal .close-modal {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #94a3b8;
+            background: none;
+            border: none;
+            transition: color 0.2s;
+            padding: 4px;
+        }
+        .auth-modal .close-modal:hover {
+            color: #ef4444;
+        }
+        .auth-modal .auth-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .auth-modal .auth-header .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0b1a2e;
+        }
+        .auth-modal .auth-header .logo span {
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .auth-modal .auth-header p {
+            color: #64748b;
+            margin-top: 4px;
+            font-size: 0.9rem;
+        }
+        .auth-modal .form-group {
+            margin-bottom: 16px;
+        }
+        .auth-modal .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+        }
+        .auth-modal .form-group .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #f1f4f9;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .auth-modal .form-group .input-wrapper:focus-within {
+            border-color: #1a2f44;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(26, 47, 68, 0.08);
+        }
+        .auth-modal .form-group .input-wrapper i {
+            padding: 0 14px;
+            color: #94a3b8;
+            font-size: 1rem;
+            min-width: 40px;
+            text-align: center;
+        }
+        .auth-modal .form-group .input-wrapper input {
+            width: 100%;
+            padding: 13px 14px 13px 0;
+            border: none;
+            background: transparent;
+            font-size: 0.95rem;
+            outline: none;
+            color: #0f172a;
+        }
+        .auth-modal .form-group .input-wrapper .toggle-password {
+            padding: 0 14px;
+            cursor: pointer;
+            color: #94a3b8;
+            min-width: 40px;
+            text-align: center;
+        }
+        .auth-modal .form-group .input-wrapper .toggle-password:hover {
+            color: #334155;
+        }
+        .auth-modal .btn-auth {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #0b1a2e, #1a2f44);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .auth-modal .btn-auth:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(26, 47, 68, 0.3);
+        }
+        .auth-modal .btn-auth:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .auth-modal .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .auth-modal .auth-footer a {
+            color: #1a2f44;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .auth-modal .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        .auth-modal .alert {
+            padding: 10px 14px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-weight: 500;
+            display: none;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        .auth-modal .alert.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+            display: flex;
+        }
+        .auth-modal .alert.success {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            display: flex;
+        }
+        .auth-modal .alert.info {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            display: flex;
+        }
+        .auth-modal .password-requirements {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 6px;
+            padding-left: 4px;
+        }
+        .auth-modal .password-requirements li {
+            list-style: none;
+            margin: 3px 0;
+        }
+        .auth-modal .password-requirements li.valid {
+            color: #22c55e;
+        }
+        .auth-modal .password-requirements li.invalid {
+            color: #ef4444;
+        }
+
+        /* ===== FORGOT PASSWORD ===== */
+        .forgot-password-form {
+            display: none;
+        }
+        .forgot-password-form.active {
+            display: block;
+        }
+        .back-to-login {
+            color: #1a2f44;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .back-to-login:hover {
+            text-decoration: underline;
+        }
+        .reset-success {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        .reset-success.active {
+            display: block;
+        }
+        .reset-success i {
+            font-size: 4rem;
+            color: #22c55e;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+                padding: 20px;
+            }
+            header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box input {
+                width: 100%;
+            }
+            .search-box {
+                flex: 1;
+            }
+            .filters {
+                border-radius: 28px;
+                padding: 14px 18px;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+            .whatsapp-notice {
+                flex-direction: column;
+                text-align: center;
+                border-radius: 28px;
+                padding: 20px;
+            }
+            .logo h1 {
+                font-size: 2rem;
+            }
+            .header-wrapper {
+                top: 40px;
+            }
+            .marquee-content span {
+                font-size: 0.9rem;
+                padding: 0 30px;
+            }
+            .auth-modal .modal-content {
+                padding: 30px 20px;
+            }
+            .user-menu .user-name {
+                max-width: 70px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-actions {
+                flex-wrap: wrap;
+            }
+            .marquee-content span {
+                font-size: 0.8rem;
+                padding: 0 20px;
+            }
+            .user-menu .user-name {
+                display: none;
+            }
+            .auth-modal .modal-content {
+                padding: 25px 16px;
+                border-radius: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="marquee-wrapper">
+    <div class="marquee-content">
+        <span><i class="fas fa-shoe-prints"></i> Bienvenue sur Aizane Store - Votre boutique de sneakers premium</span>
+        <span><i class="fas fa-tag"></i> Toutes nos chaussures à 15 000 FCFA</span>
+        <span><i class="fas fa-truck"></i> Livraison rapide et sécurisée</span>
+        <span><i class="fas fa-wallet"></i> Paiement 100% sécurisé via Jeko</span>
+        <span><i class="fas fa-star"></i> Qualité authentique garantie</span>
+        <span><i class="fas fa-shoe-prints"></i> Bienvenue sur Aizane Store - Votre boutique de sneakers premium</span>
+        <span><i class="fas fa-tag"></i> Toutes nos chaussures à 15 000 FCFA</span>
+        <span><i class="fas fa-truck"></i> Livraison rapide et sécurisée</span>
+        <span><i class="fas fa-wallet"></i> Paiement 100% sécurisé via Jeko</span>
+        <span><i class="fas fa-star"></i> Qualité authentique garantie</span>
+    </div>
+</div>
+
+<div class="header-wrapper">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Aizane <span>Store</span></h1>
+                <p><i class="fas fa-shoe-prints"></i> Authentic sneakers</p>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Rechercher..." />
+                </div>
+                <div class="user-menu" id="userMenu">
+                    <div class="avatar" id="userAvatar">C</div>
+                    <span class="user-name" id="userName">Connexion</span>
+                </div>
+                <div class="cart-icon" id="cartToggle">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="container">
+    <div class="filters" id="filterContainer">
+        <span class="filter-label"><i class="fas fa-filter"></i> Marque</span>
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="Nike">Nike</button>
+        <button class="filter-btn" data-filter="Nike SB">Nike SB</button>
+        <button class="filter-btn" data-filter="Jordan">Jordan</button>
+        <button class="filter-btn" data-filter="Adidas">Adidas</button>
+    </div>
+
+    <div class="products-grid" id="productGrid"></div>
+
+    <div class="whatsapp-notice">
+        <div class="left">
+            <i class="fab fa-whatsapp"></i>
+            <span>📦 Dès que vous validez le paiement, je reçois les détails de la commande sur WhatsApp</span>
+        </div>
+        <div class="phone"><i class="fas fa-phone-alt"></i> +225 05 46 44 67 06</div>
+    </div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h2><i class="fas fa-shopping-bag"></i> Panier</h2>
+        <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="cartTotalPrice">0 FCFA</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+            <i class="fas fa-lock"></i> Payer avec Jeko
+        </button>
+        <p style="font-size:0.75rem; color:#94a3b8; text-align:center; margin-top:12px;">
+            🔒 Paiement sécurisé • Jeko.africa
+        </p>
+    </div>
+</div>
+
+<!-- ===== MODAL AUTH ===== -->
+<div class="auth-modal" id="authModal">
+    <div class="modal-content">
+        <button class="close-modal" id="closeAuthModal"><i class="fas fa-times"></i></button>
+        
+        <div class="auth-header">
+            <div class="logo">Aizane <span>Store</span></div>
+            <p id="authSubtitle">Créez votre compte</p>
+        </div>
+
+        <div class="alert" id="authAlert">
+            <i class="fas fa-info-circle"></i>
+            <span id="authAlertText"></span>
+        </div>
+
+        <!-- Formulaire d'inscription -->
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="registerName">Nom complet</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="registerName" placeholder="Josue Aizane" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="registerEmail">Adresse email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="registerEmail" placeholder="aizajosue71@gmail.com" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="registerPhone">Téléphone</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="registerPhone" placeholder="0546446706" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="registerPassword">Mot de passe</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerPassword" placeholder="Minimum 6 caractères" required />
+                    <i class="fas fa-eye toggle-password" id="toggleRegisterPassword"></i>
+                </div>
+                <ul class="password-requirements" id="registerRequirements">
+                    <li id="regReqLength"><i class="fas fa-circle"></i> Au moins 6 caractères</li>
+                    <li id="regReqLower"><i class="fas fa-circle"></i> Une minuscule</li>
+                    <li id="regReqUpper"><i class="fas fa-circle"></i> Une majuscule</li>
+                    <li id="regReqNumber"><i class="fas fa-circle"></i> Un chiffre</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <label for="registerConfirm">Confirmer le mot de passe</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerConfirm" placeholder="Confirmez votre mot de passe" required />
+                </div>
+            </div>
+
+            <button type="submit" class="btn-auth" id="registerBtn">
+                <i class="fas fa-user-plus"></i> Créer un compte
+            </button>
+        </form>
+
+        <!-- Formulaire de connexion -->
+        <form id="loginForm" style="display:none;">
+            <div class="form-group">
+                <label for="loginEmail">Adresse email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="exemple@email.com" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Mot de passe</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Votre mot de passe" required />
+                    <i class="fas fa-eye toggle-password" id="toggleLoginPassword"></i>
+                </div>
+            </div>
+
+            <div style="text-align:right; margin-top:-10px; margin-bottom:15px;">
+                <a id="forgotPasswordLink" style="color:#1a2f44; font-size:0.85rem; cursor:pointer; font-weight:600;">Mot de passe oublié ?</a>
+            </div>
+
+            <button type="submit" class="btn-auth" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Se connecter
+            </button>
+        </form>
+
+        <!-- Formulaire mot de passe oublié -->
+        <div class="forgot-password-form" id="forgotPasswordForm">
+            <div class="form-group">
+                <label for="resetEmail">Adresse email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="resetEmail" placeholder="votre@email.com" required />
+                </div>
+            </div>
+            <button class="btn-auth" id="resetPasswordBtn">
+                <i class="fas fa-paper-plane"></i> Envoyer le lien de réinitialisation
+            </button>
+            <div style="text-align:center; margin-top:12px;">
+                <a class="back-to-login" id="backToLoginFromReset"><i class="fas fa-arrow-left"></i> Retour à la connexion</a>
+            </div>
+        </div>
+
+        <!-- Message de succès réinitialisation -->
+        <div class="reset-success" id="resetSuccess">
+            <i class="fas fa-check-circle"></i>
+            <h3>Email envoyé !</h3>
+            <p style="color:#64748b; margin-top:8px;">Un lien de réinitialisation a été envoyé à votre adresse email.</p>
+            <a class="back-to-login" id="backToLoginFromSuccess"><i class="fas fa-arrow-left"></i> Retour à la connexion</a>
+        </div>
+
+        <div class="auth-footer">
+            <span id="authFooterText">Déjà un compte ?</span>
+            <a id="authSwitchLink">Se connecter</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // CONFIGURATION SUPABASE
+    // ============================================================
+    const SUPABASE_URL = 'https://fskywnnjgpelsqrwlqqt.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_3mPafUqcIKW69_e7ItPu2g_c2C_ds1E';
+    const JEKO_URL = 'https://pay.jeko.africa/pl/4d45802b-b2bf-4aa7-bff2-42bf1856f429';
+    const WHATSAPP_NUMBER = '2250546446706';
+
+    // ============================================================
+    // ÉTAT DE L'APPLICATION
+    // ============================================================
+    let currentUser = null;
+    let cart = {};
+    let products = [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let isLoginMode = false;
+    let isForgotPasswordMode = false;
+
+    // ============================================================
+    // RÉFÉRENCES DOM
+    // ============================================================
+    const productGrid = document.getElementById('productGrid');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartToggle = document.getElementById('cartToggle');
+    const closeCart = document.getElementById('closeCart');
+    const cartItemsContainer = document.getElementById('cartItems');
+    const cartTotalPrice = document.getElementById('cartTotalPrice');
+    const cartCount = document.getElementById('cartCount');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const userMenu = document.getElementById('userMenu');
+    const userName = document.getElementById('userName');
+    const userAvatar = document.getElementById('userAvatar');
+
+    const authModal = document.getElementById('authModal');
+    const closeAuthModal = document.getElementById('closeAuthModal');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+    const resetSuccess = document.getElementById('resetSuccess');
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    const resetPasswordBtn = document.getElementById('resetPasswordBtn');
+    const authAlert = document.getElementById('authAlert');
+    const authAlertText = document.getElementById('authAlertText');
+    const authSwitchLink = document.getElementById('authSwitchLink');
+    const authFooterText = document.getElementById('authFooterText');
+    const authSubtitle = document.getElementById('authSubtitle');
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+    const backToLoginFromReset = document.getElementById('backToLoginFromReset');
+    const backToLoginFromSuccess = document.getElementById('backToLoginFromSuccess');
+
+    const loginEmail = document.getElementById('loginEmail');
+    const loginPassword = document.getElementById('loginPassword');
+    const toggleLoginPassword = document.getElementById('toggleLoginPassword');
+    const registerName = document.getElementById('registerName');
+    const registerEmail = document.getElementById('registerEmail');
+    const registerPhone = document.getElementById('registerPhone');
+    const registerPassword = document.getElementById('registerPassword');
+    const registerConfirm = document.getElementById('registerConfirm');
+    const toggleRegisterPassword = document.getElementById('toggleRegisterPassword');
+    const resetEmail = document.getElementById('resetEmail');
+
+    // ============================================================
+    // PRODUITS LOCAUX
+    // ============================================================
+    function loadLocalProducts() {
+        products = [
+            { id: 1, name: "Nike Air Force 1 Low Blanc", brand: "Nike", description: "Classique intemporel", price: 15000, image_url: "https://i.postimg.cc/8jCM3cyn/IMG-1932.jpg", category: "Baskets", stock: 50 },
+            { id: 2, name: "Nike Air Force 1 07 Blanc", brand: "Nike", description: "La Air Force 1 reinventee", price: 15000, image_url: "https://i.postimg.cc/56tLGy7W/IMG-1931.jpg", category: "Baskets", stock: 45 },
+            { id: 3, name: "Nike Air Force 1 Low Triple White", brand: "Nike", description: "Le total look blanc", price: 15000, image_url: "https://i.postimg.cc/xcdM78xS/IMG-1933.jpg", category: "Baskets", stock: 30 },
+            { id: 4, name: "Nike TN Noir", brand: "Nike", description: "La TN iconique en version noire", price: 15000, image_url: "https://i.postimg.cc/Sx8fBYx4/IMG-1941.jpg", category: "Baskets", stock: 25 },
+            { id: 5, name: "Nike TN", brand: "Nike", description: "La legendaire TN", price: 15000, image_url: "https://i.postimg.cc/wjJQCRj8/IMG-1940.jpg", category: "Baskets", stock: 20 },
+            { id: 6, name: "Nike SB Dunk Low Ben and Jerrys", brand: "Nike SB", description: "Collab exclusive avec Ben and Jerrys", price: 15000, image_url: "https://i.postimg.cc/YhSYV0nH/IMG-1930.jpg", category: "Skate", stock: 15 },
+            { id: 7, name: "Nike SB Dunk Low Bleu Clair", brand: "Nike SB", description: "Bleu clair avec Swoosh bordeaux", price: 15000, image_url: "https://i.postimg.cc/4m3VMyLJ/IMG-1928.jpg", category: "Skate", stock: 20 },
+            { id: 8, name: "Adidas Spezial Noir", brand: "Adidas", description: "L elegance Adidas Spezial", price: 15000, image_url: "https://i.postimg.cc/w7BLPMfg/IMG-1927.jpg", category: "Baskets", stock: 35 },
+            { id: 9, name: "Adidas Campus Gris", brand: "Adidas", description: "La Campus en gris", price: 15000, image_url: "https://i.postimg.cc/5NDmKSbW/IMG-1939.jpg", category: "Baskets", stock: 30 },
+            { id: 10, name: "Adidas Campus Noir", brand: "Adidas", description: "La Campus en noir", price: 15000, image_url: "https://i.postimg.cc/NjTk32jv/IMG-1938.jpg", category: "Baskets", stock: 25 },
+            { id: 11, name: "Adidas Superstar Noir", brand: "Adidas", description: "La Superstar legendaire", price: 15000, image_url: "https://i.postimg.cc/GmYxWTh6/IMG-1937.jpg", category: "Baskets", stock: 40 },
+            { id: 12, name: "Air Jordan 11", brand: "Jordan", description: "La Air Jordan 11", price: 15000, image_url: "https://i.postimg.cc/zGWFsHGv/IMG-1942.jpg", category: "Basketball", stock: 20 },
+            { id: 13, name: "Air Jordan 1 Rouge Noir", brand: "Jordan", description: "La AJ1 en coloris rouge et noir", price: 15000, image_url: "https://i.postimg.cc/4xtQDHxh/IMG-1943.jpg", category: "Basketball", stock: 25 },
+            { id: 14, name: "Air Jordan 1 Gris", brand: "Jordan", description: "La AJ1 en gris", price: 15000, image_url: "https://i.postimg.cc/g2RHCL2Z/IMG-1945.jpg", category: "Basketball", stock: 30 }
+        ];
+        renderProducts();
+    }
+
+    // ============================================================
+    // RENDU DES PRODUITS
+    // ============================================================
+    function renderProducts() {
+        const filtered = products.filter(p => {
+            const matchFilter = currentFilter === 'all' || p.brand === currentFilter;
+            const matchSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                               p.brand.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchFilter && matchSearch;
+        });
+
+        if (filtered.length === 0) {
+            productGrid.innerHTML = `
+                <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:#64748b;">
+                    <i class="fas fa-search" style="font-size:3rem; opacity:0.3; margin-bottom:16px; display:block;"></i>
+                    <h3 style="font-weight:600;">Aucun résultat</h3>
+                    <p>Essayez de modifier votre recherche ou filtres</p>
+                </div>
+            `;
+            return;
+        }
+
+        productGrid.innerHTML = filtered.map(p => `
+            <div class="product-card" data-id="${p.id}">
+                <span class="product-badge">${p.brand}</span>
+                <div class="product-image-wrapper">
+                    <img class="product-image" src="${p.image_url}" alt="${p.name}" loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.querySelector('.image-placeholder').style.display='flex';">
+                    <div class="image-placeholder" style="display:none; background: linear-gradient(135deg, #1a2f44, #2a4a6a);">
+                        <div>
+                            <i class="fas fa-shoe-prints" style="font-size:2.5rem; display:block; margin-bottom:10px;"></i>
+                            ${p.name}
+                        </div>
+                    </div>
+                    <div class="product-image-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <h3>${p.name}</h3>
+                <div class="brand"><i class="fas fa-tag"></i> ${p.brand}</div>
+                <div class="product-footer">
+                    <span class="price">${p.price.toLocaleString()} <small>FCFA</small></span>
+                    <button class="btn-add" data-id="${p.id}">
+                        <i class="fas fa-cart-plus"></i> Ajouter
+                    </button>
+                </div>
+            </div>
+        `).join('');
+
+        document.querySelectorAll('.btn-add').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = parseInt(btn.dataset.id);
+                if (!currentUser) {
+                    openAuthModal();
+                    return;
+                }
+                addToCart(id);
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Ajouté !';
+                btn.style.background = '#22c55e';
+                setTimeout(() => { 
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '#0b1a2e';
+                }, 800);
+            });
+        });
+    }
+
+    // ============================================================
+    // FONCTIONS PANIER
+    // ============================================================
+    function addToCart(id) {
+        cart[id] = (cart[id] || 0) + 1;
+        updateCartUI();
+        saveCartToSupabase();
+    }
+
+    function removeFromCart(id) {
+        if (cart[id]) {
+            cart[id]--;
+            if (cart[id] <= 0) delete cart[id];
+        }
+        updateCartUI();
+        saveCartToSupabase();
+    }
+
+    function getTotalItems() {
+        return Object.values(cart).reduce((acc, qty) => acc + qty, 0);
+    }
+
+    function getTotalPrice() {
+        return Object.keys(cart).reduce((acc, id) => acc + cart[id] * 15000, 0);
+    }
+
+    function updateCartUI() {
+        const totalItems = getTotalItems();
+        cartCount.textContent = totalItems;
+
+        if (totalItems === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Votre panier est vide</p>
+                    <p style="font-size:0.9rem; margin-top:8px;">Découvrez nos sneakers !</p>
+                </div>
+            `;
+            cartTotalPrice.textContent = '0 FCFA';
+            return;
+        }
+
+        let html = '';
+        for (const [id, qty] of Object.entries(cart)) {
+            const product = products.find(p => p.id === parseInt(id));
+            if (!product) continue;
+            html += `
+                <div class="cart-item">
+                    <img src="${product.image_url}" alt="${product.name}" 
+                         onerror="this.style.display='none';">
+                    <div class="info">
+                        <h4>${product.name}</h4>
+                        <div class="item-price">${(15000 * qty).toLocaleString()} FCFA</div>
+                    </div>
+                    <div class="qty-control">
+                        <button onclick="removeFromCart(${id})">−</button>
+                        <span>${qty}</span>
+                        <button onclick="addToCart(${id})">+</button>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${id})"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            `;
+        }
+        cartItemsContainer.innerHTML = html;
+        cartTotalPrice.textContent = getTotalPrice().toLocaleString() + ' FCFA';
+    }
+
+    // ============================================================
+    // SAUVEGARDER LE PANIER
+    // ============================================================
+    async function saveCartToSupabase() {
+        if (!currentUser) return;
+        try {
+            await fetch(`${SUPABASE_URL}/rest/v1/users?id=eq.${currentUser.user_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`
+                },
+                body: JSON.stringify({ cart_items: cart })
+            });
+        } catch (error) {
+            console.error('Erreur sauvegarde panier:', error);
+        }
+    }
+
+    // ============================================================
+    // GESTION DU PANIER
+    // ============================================================
+    function openCart() {
+        cartSidebar.classList.add('open');
+        cartOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCartFn() {
+        cartSidebar.classList.remove('open');
+        cartOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    cartToggle.addEventListener('click', openCart);
+    closeCart.addEventListener('click', closeCartFn);
+    cartOverlay.addEventListener('click', closeCartFn);
+
+    // ============================================================
+    // MODAL AUTH
+    // ============================================================
+    function openAuthModal(mode = 'register') {
+        isLoginMode = mode === 'login';
+        isForgotPasswordMode = false;
+        authModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        updateAuthForm();
+        authAlert.style.display = 'none';
+        forgotPasswordForm.classList.remove('active');
+        resetSuccess.classList.remove('active');
+    }
+
+    function closeAuthModalFn() {
+        authModal.classList.remove('active');
+        document.body.style.overflow = '';
+        authAlert.style.display = 'none';
+        forgotPasswordForm.classList.remove('active');
+        resetSuccess.classList.remove('active');
+        isForgotPasswordMode = false;
+    }
+
+    function updateAuthForm() {
+        if (isForgotPasswordMode) {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'none';
+            forgotPasswordForm.classList.add('active');
+            resetSuccess.classList.remove('active');
+            authSubtitle.textContent = 'Réinitialiser le mot de passe';
+            authFooterText.textContent = '';
+            authSwitchLink.style.display = 'none';
+            return;
+        }
+
+        authSwitchLink.style.display = 'inline';
+        forgotPasswordForm.classList.remove('active');
+        resetSuccess.classList.remove('active');
+
+        if (isLoginMode) {
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+            authSubtitle.textContent = 'Connectez-vous à votre compte';
+            authFooterText.textContent = 'Pas encore de compte ?';
+            authSwitchLink.textContent = 'Créer un compte';
+        } else {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            authSubtitle.textContent = 'Créez votre compte';
+            authFooterText.textContent = 'Déjà un compte ?';
+            authSwitchLink.textContent = 'Se connecter';
+        }
+        authAlert.style.display = 'none';
+    }
+
+    function showAuthAlert(message, type = 'error') {
+        authAlert.className = `alert ${type}`;
+        authAlertText.textContent = message;
+        authAlert.style.display = 'flex';
+        setTimeout(() => { authAlert.style.display = 'none'; }, 5000);
+    }
+
+    closeAuthModal.addEventListener('click', closeAuthModalFn);
+    authModal.addEventListener('click', (e) => {
+        if (e.target === authModal) closeAuthModalFn();
+    });
+
+    authSwitchLink.addEventListener('click', () => {
+        isLoginMode = !isLoginMode;
+        isForgotPasswordMode = false;
+        updateAuthForm();
+    });
+
+    // ============================================================
+    // MOT DE PASSE OUBLIÉ
+    // ============================================================
+    forgotPasswordLink.addEventListener('click', () => {
+        isForgotPasswordMode = true;
+        updateAuthForm();
+        resetEmail.value = loginEmail.value || '';
+    });
+
+    backToLoginFromReset.addEventListener('click', () => {
+        isForgotPasswordMode = false;
+        isLoginMode = true;
+        updateAuthForm();
+    });
+
+    backToLoginFromSuccess.addEventListener('click', () => {
+        isForgotPasswordMode = false;
+        isLoginMode = true;
+        updateAuthForm();
+    });
+
+    // ============================================================
+    // RÉINITIALISATION MOT DE PASSE
+    // ============================================================
+    resetPasswordBtn.addEventListener('click', async () => {
+        const email = resetEmail.value.trim();
+
+        if (!email) {
+            showAuthAlert('⚠️ Veuillez entrer votre adresse email', 'error');
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showAuthAlert('⚠️ Adresse email invalide', 'error');
+            return;
+        }
+
+        resetPasswordBtn.disabled = true;
+        resetPasswordBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+
+        try {
+            // Vérifier si l'email existe dans la base
+            const checkResponse = await fetch(`${SUPABASE_URL}/rest/v1/users?email=eq.${encodeURIComponent(email)}&select=id`, {
+                headers: {
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`
+                }
+            });
+
+            const users = await checkResponse.json();
+
+            if (users && users.length > 0) {
+                // Simuler l'envoi d'email (à remplacer par un vrai service email)
+                // En production, utilisez Supabase Auth ou un service comme SendGrid
+                showAuthAlert('✅ Un lien de réinitialisation a été envoyé à votre adresse email', 'success');
+                
+                setTimeout(() => {
+                    resetSuccess.classList.add('active');
+                    forgotPasswordForm.classList.remove('active');
+                    resetPasswordBtn.disabled = false;
+                    resetPasswordBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le lien de réinitialisation';
+                }, 1500);
+            } else {
+                showAuthAlert('❌ Aucun compte associé à cette adresse email', 'error');
+                resetPasswordBtn.disabled = false;
+                resetPasswordBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le lien de réinitialisation';
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+            showAuthAlert('❌ Une erreur est survenue. Veuillez réessayer.', 'error');
+            resetPasswordBtn.disabled = false;
+            resetPasswordBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le lien de réinitialisation';
+        }
+    });
+
+    // ============================================================
+    // TOGGLE PASSWORD
+    // ============================================================
+    toggleLoginPassword.addEventListener('click', () => {
+        const type = loginPassword.type === 'password' ? 'text' : 'password';
+        loginPassword.type = type;
+        toggleLoginPassword.classList.toggle('fa-eye');
+        toggleLoginPassword.classList.toggle('fa-eye-slash');
+    });
+
+    toggleRegisterPassword.addEventListener('click', () => {
+        const type = registerPassword.type === 'password' ? 'text' : 'password';
+        registerPassword.type = type;
+        toggleRegisterPassword.classList.toggle('fa-eye');
+        toggleRegisterPassword.classList.toggle('fa-eye-slash');
+    });
+
+    // ============================================================
+    // VALIDATION MOT DE PASSE
+    // ============================================================
+    registerPassword.addEventListener('input', () => {
+        const pwd = registerPassword.value;
+        document.getElementById('regReqLength').className = pwd.length >= 6 ? 'valid' : 'invalid';
+        document.getElementById('regReqLower').className = /[a-z]/.test(pwd) ? 'valid' : 'invalid';
+        document.getElementById('regReqUpper').className = /[A-Z]/.test(pwd) ? 'valid' : 'invalid';
+        document.getElementById('regReqNumber').className = /[0-9]/.test(pwd) ? 'valid' : 'invalid';
+    });
+
+    // ============================================================
+    // INSCRIPTION
+    // ============================================================
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const fullName = registerName.value.trim();
+        const email = registerEmail.value.trim();
+        const phone = registerPhone.value.trim();
+        const password = registerPassword.value;
+        const confirm = registerConfirm.value;
+
+        if (!fullName || !email || !password) {
+            showAuthAlert('⚠️ Veuillez remplir tous les champs obligatoires', 'error');
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showAuthAlert('⚠️ Adresse email invalide', 'error');
+            return;
+        }
+
+        if (password.length < 6) {
+            showAuthAlert('⚠️ Le mot de passe doit contenir au moins 6 caractères', 'error');
+            return;
+        }
+
+        if (password !== confirm) {
+            showAuthAlert('⚠️ Les mots de passe ne correspondent pas', 'error');
+            return;
+        }
+
+        registerBtn.disabled = true;
+        registerBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Inscription...';
+
+        try {
+            const response = await fetch(`${SUPABASE_URL}/rest/v1/rpc/register_user`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`
+                },
+                body: JSON.stringify({
+                    p_email: email,
+                    p_password: password,
+                    p_full_name: fullName,
+                    p_phone: phone || null
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                showAuthAlert('✅ Compte créé avec succès ! Vous pouvez maintenant vous connecter', 'success');
+                registerForm.reset();
+                setTimeout(() => {
+                    isLoginMode = true;
+                    updateAuthForm();
+                    loginEmail.value = email;
+                }, 1500);
+            } else {
+                const errorMsg = data.message || data.details || 'Erreur lors de l\'inscription';
+                showAuthAlert(`❌ ${errorMsg}`, 'error');
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+            showAuthAlert('❌ Une erreur est survenue. Veuillez réessayer.', 'error');
+        }
+
+        registerBtn.disabled = false;
+        registerBtn.innerHTML = '<i class="fas fa-user-plus"></i> Créer un compte';
+    });
+
+    // ============================================================
+    // CONNEXION
+    // ============================================================
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const email = loginEmail.value.trim();
+        const password = loginPassword.value.trim();
+
+        if (!email || !password) {
+            showAuthAlert('⚠️ Veuillez remplir tous les champs', 'error');
+            return;
+        }
+
+        loginBtn.disabled = true;
+        loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connexion...';
+
+        try {
+            const response = await fetch(`${SUPABASE_URL}/rest/v1/rpc/login_user`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`
+                },
+                body: JSON.stringify({
+                    p_email: email,
+                    p_password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (data && data.length > 0) {
+                const user = data[0];
+                localStorage.setItem('aizane_user', JSON.stringify(user));
+                currentUser = user;
+                updateUserUI(user);
+                showAuthAlert('✅ Connexion réussie !', 'success');
+                setTimeout(() => {
+                    closeAuthModalFn();
+                    loadCartFromUser(user);
+                }, 1000);
+            } else {
+                showAuthAlert('❌ Email ou mot de passe incorrect', 'error');
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+            showAuthAlert('❌ Une erreur est survenue', 'error');
+        }
+
+        loginBtn.disabled = false;
+        loginBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Se connecter';
+    });
+
+    // ============================================================
+    // GESTION UTILISATEUR
+    // ============================================================
+    function updateUserUI(user) {
+        if (user) {
+            currentUser = user;
+            userName.textContent = user.full_name || 'Utilisateur';
+            userAvatar.textContent = (user.full_name || 'U')[0].toUpperCase();
+        } else {
+            currentUser = null;
+            userName.textContent = 'Connexion';
+            userAvatar.textContent = 'C';
+            cart = {};
+            updateCartUI();
+        }
+    }
+
+    function loadCartFromUser(user) {
+        if (user && user.cart_items) {
+            try {
+                cart = typeof user.cart_items === 'object' ? user.cart_items : JSON.parse(user.cart_items);
+            } catch (e) {
+                cart = {};
+            }
+        } else {
+            cart = {};
+        }
+        updateCartUI();
+    }
+
+    userMenu.addEventListener('click', () => {
+        if (!currentUser) {
+            openAuthModal('register');
+        } else {
+            if (confirm('👋 Voulez-vous vous déconnecter ?')) {
+                localStorage.removeItem('aizane_user');
+                updateUserUI(null);
+                cart = {};
+                updateCartUI();
+                showAuthAlert('👋 Vous êtes déconnecté', 'info');
+                setTimeout(() => closeAuthModalFn(), 1000);
+            }
+        }
+    });
+
+    // ============================================================
+    // CHECKOUT
+    // ============================================================
+    checkoutBtn.addEventListener('click', () => {
+        const totalItems = getTotalItems();
+        if (totalItems === 0) {
+            alert('🛒 Votre panier est vide');
+            return;
+        }
+
+        if (!currentUser) {
+            openAuthModal('register');
+            return;
+        }
+
+        const orderLines = [];
+        for (const [id, qty] of Object.entries(cart)) {
+            const p = products.find(prod => prod.id === parseInt(id));
+            if (p) orderLines.push(`${p.name} (x${qty})`);
+        }
+        const totalPrice = getTotalPrice();
+        const summary = orderLines.join(', ');
+        const message = `🛒 *Nouvelle commande Aizane Store*%0A👤 Client : ${currentUser.full_name}%0A📞 Téléphone : ${currentUser.phone || 'Non renseigné'}%0A📦 Articles : ${summary}%0A💰 Total : ${totalPrice} FCFA`;
+
+        const jekoUrl = `${JEKO_URL}?amount=${totalPrice}&description=${encodeURIComponent(summary)}&customer_phone=${WHATSAPP_NUMBER}`;
+
+        window.open(jekoUrl, '_blank');
+
+        setTimeout(() => {
+            const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank');
+        }, 2500);
+
+        setTimeout(() => {
+            cart = {};
+            updateCartUI();
+            saveCartToSupabase();
+            closeCartFn();
+            alert('✅ Commande envoyée !');
+        }, 4500);
+    });
+
+    // ============================================================
+    // FILTRES & RECHERCHE
+    // ============================================================
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.dataset.filter;
+            renderProducts();
+        });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim();
+        renderProducts();
+    });
+
+    // ============================================================
+    // INITIALISATION
+    // ============================================================
+    async function init() {
+        const savedUser = localStorage.getItem('aizane_user');
+        if (savedUser) {
+            try {
+                const user = JSON.parse(savedUser);
+                updateUserUI(user);
+                loadCartFromUser(user);
+            } catch (e) {
+                updateUserUI(null);
+            }
+        }
+        loadLocalProducts();
+        updateCartUI();
+
+        if (!currentUser) {
+            setTimeout(() => {
+                openAuthModal('register');
+            }, 500);
+        }
+    }
+
+    init();
+
+    window.addToCart = addToCart;
+    window.removeFromCart = removeFromCart;
+    window.openAuthModal = openAuthModal;
+
+    console.log('👟 Aizane Store chargé !');
+    console.log(`📦 ${products.length} produits disponibles`);
+    console.log('🔗 Supabase connecté');
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
